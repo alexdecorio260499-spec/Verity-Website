@@ -51,22 +51,33 @@
     text-align: center;
     position: relative;
     display: flex;
-    /* Flex to control children */
     justify-content: center;
-    /* Center content */
+    /* Centers the direct children (nav) */
+    align-items: center;
+    padding: 0 20px;
+    /* Add padding to container */
 }
 
-/* Force hide logo on desktop to achieve the 'centered text only' look */
 .logo {
-    display: none !important;
+    display: block !important;
+    position: absolute;
+    left: 0px;
+    /* Moved 20px left (from 20px) */
+    color: #fff !important;
+    /* Force white text */
+    text-decoration: none;
+    font-size: 22px;
+    /* Adjust size */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+    /* Ensure above others */
 }
 
 .main_h nav {
+    /* No float, no fixed width needed if flex centered */
     width: auto;
-    /* Allow it to fit content */
-    text-align: center;
-    flex-grow: 1;
-    /* Take up space */
     display: flex;
     justify-content: center;
 }
