@@ -3,9 +3,9 @@ import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white pt-12 pb-8 px-6 border-t border-gray-200">
+    <footer className="bg-white py-6 px-6 border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-4 items-start">
 
           {/* Brand & Socials - Compact */}
           <div className="col-span-1 md:col-span-1">
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Newsletter - Minimalist */}
-          <div className="bg-gray-50 p-5 rounded-xl border border-gray-100">
+          <div className="bg-gray-50 p-3 rounded-xl border border-gray-100">
             <h5 className="font-bold text-[#1a2e1a] mb-2 text-sm">Design Tips</h5>
             <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
               <input
@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+        <div className="pt-4 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
           <p>© 2025 DIY DEALER. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[#1a2e1a] transition-colors">Terms</a>

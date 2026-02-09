@@ -22,18 +22,18 @@ const Booster: React.FC = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <section id="testimonials" className="py-10 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-3xl overflow-hidden">
 
         {/* Left Side: Why People Love This (High Emphasis) */}
-        <div className="bg-transparent p-10 md:p-16 flex flex-col justify-center relative overflow-hidden">
+        <div className="bg-transparent p-8 md:p-10 flex flex-col justify-center relative overflow-hidden">
           {/* Subtle background glow effect */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight relative z-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight relative z-10">
             Why people love this
           </h2>
-          <ul className="space-y-6 relative z-10 mb-10">
+          <ul className="space-y-4 relative z-10 mb-6">
             {benefits.map((benefit, idx) => (
               <li key={idx} className="flex items-start gap-4 text-white/90 text-lg font-medium">
                 <div className="mt-1 w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center shrink-0 border border-green-500/30">
@@ -47,7 +47,7 @@ const Booster: React.FC = () => {
           </ul>
 
           <div className="relative z-10">
-            <button className="w-full sm:w-auto px-8 py-4 bg-white text-[#1a2e1a] rounded-full font-bold text-lg shadow-lg hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2">
+            <button className="w-full sm:w-auto px-6 py-3 bg-white text-[#1a2e1a] rounded-full font-bold text-lg shadow-lg hover:scale-105 transition-all active:scale-95 flex items-center justify-center gap-2">
               Start My Design
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -58,13 +58,13 @@ const Booster: React.FC = () => {
         </div>
 
         {/* Right Side: Testimonials (Clean Social Proof) */}
-        <div className="bg-transparent p-10 md:p-16 flex flex-col justify-center">
-          <h3 className="font-serif text-2xl text-white mb-8 flex items-center gap-3">
+        <div className="bg-transparent p-8 md:p-10 flex flex-col justify-center">
+          <h3 className="font-serif text-xl text-white mb-4 flex items-center gap-3">
             <span className="w-8 h-[1px] bg-white"></span>
             Stories from our Sanctuaries
           </h3>
 
-          <div className="space-y-8">
+          <div className="space-y-4">
             {testimonials.map((t, i) => (
               <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
                 <div className="flex gap-1 text-secondary mb-3">
