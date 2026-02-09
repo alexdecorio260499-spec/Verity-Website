@@ -126,7 +126,8 @@
 }
 
 .main_h nav ul a {
-    color: #fff;
+    color: #fff !important;
+    /* Forces white text always */
     text-transform: none !important;
     /* Force Title Case (as written in HTML) */
     font-size: 15px;
@@ -144,13 +145,13 @@
 }
 
 .sticky .main_h nav ul a {
-    color: #fff;
+    color: #fff !important;
     /* Always white */
 }
 
 /* Initial state */
 .main_h:not(.sticky) nav ul a {
-    color: #fff;
+    color: #fff !important;
 }
 
 .mobile-toggle {
@@ -179,7 +180,7 @@
         float: left;
         margin-left: 0;
         font-size: 20px;
-        color: #fff;
+        color: #fff !important;
     }
 }
 
