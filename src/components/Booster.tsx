@@ -22,7 +22,7 @@ const Booster: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
+    <section id="testimonials" className="py-20 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 rounded-3xl overflow-hidden">
 
         {/* Left Side: Why People Love This (High Emphasis) */}
