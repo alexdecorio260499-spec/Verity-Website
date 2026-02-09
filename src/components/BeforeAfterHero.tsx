@@ -8,7 +8,7 @@ const BeforeAfterHero: React.FC = () => {
             {/* Background Image moved to global App.tsx for fixed effect */}
 
             {/* Text Overlay */}
-            <div className="absolute inset-0 z-10 flex items-start justify-center pt-20 md:pt-28">
+            <div id="visible-offers" className="absolute inset-0 z-10 flex items-start justify-center pt-20 md:pt-28 scroll-mt-24">
                 <div className="text-center px-4 max-w-6xl">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-[#d4e157] drop-shadow-lg mb-6 leading-tight">
                         See it, love it, build it &mdash;

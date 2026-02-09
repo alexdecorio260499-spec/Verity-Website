@@ -29,7 +29,7 @@ const Header: React.FC = () => {
   // Sections found in the code or implicit
   // Replacing old links with the site's actual links but structure of new header
   const links = [
-    { name: 'Our Services', href: '#offers' },
+    { name: 'Our Services', href: '#visible-offers' },
     { name: 'Our Creations', href: '#testimonials' },
     { name: 'About Us', href: '#' },
   ];
