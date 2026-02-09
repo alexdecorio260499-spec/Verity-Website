@@ -14,6 +14,321 @@
     top: -100px;
     padding-bottom: 6px;
     font-family: "Montserrat", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Vertical center */
+}
+
+@media only screen and (max-width: 766px) {
+    .main_h {
+        padding-top: 25px;
+    }
+}
+
+.open-nav {
+    max-height: 400px !important;
+}
+
+.open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.sticky {
+    background-color: rgba(15, 23, 42, 0.6) !important;
+    /* Dark Slate-ish transparent for premium blur */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 1;
+    top: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    /* Flex to control children */
+    justify-content: center;
+    /* Center content */
+}
+
+/* Force hide logo on desktop to achieve the 'centered text only' look */
+.logo {
+    display: none !important;
+}
+
+.main_h nav {
+    width: auto;
+    /* Allow it to fit content */
+    text-align: center;
+    flex-grow: 1;
+    /* Take up space */
+    display: flex;
+    justify-content: center;
+}
+
+.main_h nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* Use flex for list items */
+    justify-content: center;
+    gap: 40px;
+    /* Space between items */
+}
+
+@media only screen and (max-width: 766px) {
+    .main_h nav ul {
+        flex-direction: column;
+        /* Stack on mobile */
+        gap: 10px;
+        width: 100%;
+        padding-top: 10px;
+        margin-bottom: 22px;
+    }
+}
+
+.main_h nav ul li {
+    display: inline-block;
+    margin: 0;
+    /* Handled by gap */
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 766px) {
+    .main_h nav ul li {
+        width: 100%;
+        padding: 7px 0;
+    }
+}
+
+.main_h nav ul a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+    /* Minimal size */
+    font-weight: 500;
+    letter-spacing: 2px;
+    /* Spaced out letters for premium feel */
+    text-decoration: none;
+    transition: opacity 0.3s;
+    opacity: 0.9;
+}
+
+.main_h nav ul a:hover {
+    opacity: 1;
+}
+
+.sticky .main_h nav ul a {
+    color: #fff;
+    /* Always white */
+}
+
+/* Initial state */
+.main_h:not(.sticky) nav ul a {
+    color: #fff;
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 30px;
+}
+
+@media only screen and (max-width: 766px) {
+    .mobile-toggle {
+        display: block;
+        top: -5px;
+    }
+
+    .logo {
+        display: block !important;
+        /* Show logo on mobile for brand context */
+        float: left;
+        margin-left: 20px;
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+.mobile-toggle span {
+    width: 30px;
+    height: 3px;
+    /* Slightly thinner */
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: #fff;
+    display: block;
+}
+
+@media only screen and (max-width: 766px) {
+    .main_h {
+        padding-top: 25px;
+    }
+}
+
+.open-nav {
+    max-height: 400px !important;
+}
+
+.open-nav .mobile-toggle {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+}
+
+.sticky {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Transparent for blur effect */
+    backdrop-filter: blur(15px);
+    /* The requested blurred background */
+    -webkit-backdrop-filter: blur(15px);
+    opacity: 1;
+    top: 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+    /* For absolute positioning of mobile toggle if needed */
+}
+
+.logo {
+    display: none;
+    /* Hidden as per 'centered text' minimal request */
+}
+
+.main_h nav {
+    width: 100%;
+    text-align: center;
+}
+
+.main_h nav ul {
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    /* Centers the list itself */
+}
+
+@media only screen and (max-width: 766px) {
+    .main_h nav ul {
+        padding-top: 10px;
+        margin-bottom: 22px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.main_h nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    /* Spacing between centered links */
+    line-height: 1.5;
+}
+
+@media only screen and (max-width: 766px) {
+    .main_h nav ul li {
+        width: 100%;
+        padding: 7px 0;
+        margin: 0;
+    }
+}
+
+.main_h nav ul a {
+    color: #fff;
+    /* White text for contrast on dark/blurred bg usually, or user's preference? Image showed white text on dark. */
+    text-transform: uppercase;
+    font-size: 14px;
+    /* Slightly larger for 'minimal' impact */
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sticky .main_h nav ul a {
+    color: #333;
+    /* Dark text when sticky on white-ish blur? Or keep white? */
+    /* User said "blured background". If it's a "glassmorphism" usually it keeps the text visible.
+        If the page is light, a white blur needs dark text.
+        If the page is dark, a dark blur needs white text.
+        The site has a light theme usually.
+        Let's try a dark blur for a "premium" feel or white blur with dark text.
+        The reference image had a DARK background with white text.
+        I will make the sticky background DARK BLUR to match the image reference implied.
+     */
+}
+
+.sticky {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Darker blur as per starry image ref */
+    border-bottom: none;
+}
+
+.sticky nav ul a {
+    color: #fff;
+}
+
+/* Initial state (transparent) text color - likely white if over hero */
+.main_h:not(.sticky) nav ul a {
+    color: #fff;
+    /* Assuming hero is dark/image */
+}
+
+.mobile-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 22px;
+    top: 0;
+    width: 30px;
+}
+
+@media only screen and (max-width: 766px) {
+    .mobile-toggle {
+        display: block;
+        top: -5px;
+        /* Adjust alignment */
+    }
+
+    .logo {
+        display: block;
+        /* Show logo on mobile? Or keep hidden? Let's keep hidden for consistency or show minimal */
+        float: left;
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    /* If logo is hidden on desktop, maybe show it on mobile so they know where they are? 
+       For now, sticking to strict leveling.
+    */
+}
+
+.mobile-toggle span {
+    width: 30px;
+    height: 4px;
+    margin-bottom: 6px;
+    border-radius: 1000px;
+    background: #fff;
+    /* White bars */
+    display: block;
 }
 
 @media only screen and (max-width: 766px) {
