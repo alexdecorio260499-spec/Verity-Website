@@ -74,8 +74,7 @@ const App: React.FC = () => {
       {!scrolled && (
         <button
           onClick={() => {
-            const offersSection = document.getElementById('offers');
-            if (offersSection) offersSection.scrollIntoView({ behavior: 'smooth' });
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
           }}
           className="hidden md:flex fixed bottom-8 right-8 z-40 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-full text-white hover:bg-white/20 transition-all animate-bounce shadow-lg group"
           aria-label="Scroll down"

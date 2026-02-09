@@ -18,7 +18,13 @@ const offers: Offer[] = [
     title: "Quick Vision",
     price: "€69",
     description: 'Perfect for visualizing ideas',
-    features: ['1 Layout Option', '3D Walkthrough', 'Basic Planting Plan'],
+    features: [
+      '1 Styling Option',
+      '1 Angle',
+      '1 Transformation Video',
+      'Unfurnished & Furnished Images',
+      'Full Conception Roadmap & Good Practice'
+    ],
     popular: false,
     // Professional Muted Green (Sage/Moss)
     gradient: 'bg-gradient-to-br from-[#4A5D4E] to-[#5F7A65] text-white',
@@ -30,7 +36,13 @@ const offers: Offer[] = [
     title: "Dual Vision",
     price: "€99",
     description: "Explore different aesthetics",
-    features: ["3 Design Styles", "HD Renders", "Material List", "Lighting Plan"],
+    features: [
+      "3 Styling Options",
+      "1 Angle",
+      "1 Transformation Video",
+      "Unfurnished & Furnished Images",
+      "Full Conception Roadmap & Good Practice"
+    ],
     popular: true,
     // Darker Professional Green (Deep Forest/Hunter)
     gradient: 'bg-gradient-to-br from-[#1A3C28] via-[#244F35] to-[#2E6142] text-white',
@@ -42,7 +54,11 @@ const offers: Offer[] = [
     title: "Signature Design",
     price: "From €399",
     description: "Complete construction ready",
-    features: ["Technical Drawings", "Planting Schedule", "Construction Details", "Unlimited Revisions"],
+    features: [
+      "Everything from previous offer",
+      "3 Revisions",
+      "Technical Drawings Ready for Contractors"
+    ],
     popular: false,
     // Professional Muted Green (Sage/Moss) - Matching the first one
     gradient: 'bg-gradient-to-br from-[#4A5D4E] to-[#5F7A65] text-white',

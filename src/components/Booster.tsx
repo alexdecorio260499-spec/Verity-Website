@@ -59,10 +59,11 @@ const Booster: React.FC = () => {
 
         {/* Right Side: Testimonials (Clean Social Proof) */}
         <div className="bg-transparent p-8 md:p-10 flex flex-col justify-center">
-          <h3 className="font-serif text-xl text-white mb-4 flex items-center gap-3">
-            <span className="w-8 h-[1px] bg-white"></span>
-            <span>
-              Stories <br /> from our Sanctuaries
+          <h3 className="font-serif text-xl text-white mb-4">
+            <span className="block mb-1">Stories</span>
+            <span className="flex items-center gap-3">
+              <span className="w-8 h-[1px] bg-white"></span>
+              from our Sanctuaries
             </span>
           </h3>
 
