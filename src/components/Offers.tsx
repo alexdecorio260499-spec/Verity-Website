@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 // Unified Dark Green Theme for all cards
 const offers = [
   {
-    title: 'Concept Preview',
-    price: '€69',
+    title: "Quick Vision",
+    price: "€69",
     description: 'Perfect for visualizing ideas',
     features: ['1 Layout Option', '3D Walkthrough', 'Basic Planting Plan'],
     popular: false,
@@ -14,10 +14,10 @@ const offers = [
     button: 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#2C3E30]'
   },
   {
-    title: 'Style Comparison',
-    price: '€99',
-    description: 'Explore different aesthetics',
-    features: ['3 Design Styles', 'HD Renders', 'Material List', 'Lighting Plan'],
+    title: "Dual Vision",
+    price: "€99",
+    description: "Explore different aesthetics",
+    features: ["3 Design Styles", "HD Renders", "Material List", "Lighting Plan"],
     popular: true,
     // Darker Professional Green (Deep Forest/Hunter)
     gradient: 'bg-gradient-to-br from-[#1A3C28] via-[#244F35] to-[#2E6142] text-white',
@@ -25,10 +25,10 @@ const offers = [
     button: 'bg-[#C5A065] text-white hover:bg-[#D6B278]'
   },
   {
-    title: 'Full Garden Plan',
-    price: 'From €399',
-    description: 'Complete construction ready',
-    features: ['Technical Drawings', 'Planting Schedule', 'Construction Details', 'Unlimited Revisions'],
+    title: "Signature Design",
+    price: "From €399",
+    description: "Complete construction ready",
+    features: ["Technical Drawings", "Planting Schedule", "Construction Details", "Unlimited Revisions"],
     popular: false,
     // Professional Muted Green (Sage/Moss) - Matching the first one
     gradient: 'bg-gradient-to-br from-[#4A5D4E] to-[#5F7A65] text-white',
