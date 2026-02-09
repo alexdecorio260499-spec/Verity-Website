@@ -14,6 +14,45 @@ interface CheckoutProps {
 }
 
 const Checkout: React.FC<CheckoutProps> = ({ plan, onClose }) => {
+    const containerId = "paypal-container-ZQQKJSDB3EXGU";
+
+    React.useEffect(() => {
+        // Ensure PayPal script is loaded and available
+        const renderPayPalButton = () => {
+            if (window.paypal) {
+                try {
+                    // Start fresh if needed, though usually render handles it.
+                    // The container needs to be empty or handle re-renders gracefully.
+                    const container = document.getElementById(containerId);
+                    if (container) container.innerHTML = "";
+
+                    window.paypal.HostedButtons({
+                        hostedButtonId: "ZQQKJSDB3EXGU"
+                    })
+                        .render(`#${containerId}`);
+                } catch (error) {
+                    console.error("PayPal button render error:", error);
+                }
+            }
+        };
+
+        // If the script is already loaded (from index.html async), run immediately
+        if (window.paypal) {
+            renderPayPalButton();
+        } else {
+            // If script loads later, we can retry or listen for load - but since it's in head async,
+            // it usually loads quickly. A simple interval check is robust for this case without
+            // complex script loading logic in component.
+            const checkInterval = setInterval(() => {
+                if (window.paypal) {
+                    renderPayPalButton();
+                    clearInterval(checkInterval);
+                }
+            }, 500);
+            return () => clearInterval(checkInterval);
+        }
+    }, []);
+
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
             {/* Backdrop */}
@@ -71,16 +110,17 @@ const Checkout: React.FC<CheckoutProps> = ({ plan, onClose }) => {
                 <div className="w-full md:w-1/2 p-8 md:p-12 bg-[#0F0F0F] flex flex-col items-center justify-center text-center relative z-20">
                     <h2 className="text-2xl font-serif text-white mb-8">Secure Payment</h2>
 
-                    <div className="bg-white p-4 rounded-xl shadow-lg mb-6 max-w-[260px] transform hover:scale-105 transition-transform duration-300">
-                        <img src={paypalQr} alt="PayPal QR Code" className="w-full h-auto rounded-lg" />
+                    {/* PayPal Container */}
+                    <div className="w-full max-w-[300px] bg-white p-4 rounded-xl shadow-lg mb-6 flex items-center justify-center min-h-[150px]">
+                        <div id={containerId} className="w-full"></div>
                     </div>
 
                     <div className="space-y-2">
                         <p className="text-white/90 font-medium text-lg">
-                            Scan with PayPal App
+                            Pay safely with PayPal
                         </p>
                         <p className="text-white/50 text-sm max-w-xs mx-auto leading-relaxed">
-                            Open your camera or banking app to scan the code and complete the payment instanty.
+                            Click the button above to proceed with your payment securely.
                         </p>
                     </div>
 
