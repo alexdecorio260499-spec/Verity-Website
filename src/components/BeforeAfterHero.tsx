@@ -3,12 +3,12 @@ import React from 'react';
 const BeforeAfterHero: React.FC = () => {
     return (
         <section
-            className="relative h-[55vh] md:h-[60vh] overflow-hidden select-none"
+            className="relative h-[45vh] md:h-[50vh] overflow-hidden select-none"
         >
             {/* Background Image moved to global App.tsx for fixed effect */}
 
             {/* Text Overlay */}
-            <div id="visible-offers" className="absolute inset-0 z-10 flex items-center justify-center pt-0 md:pt-0 scroll-mt-24">
+            <div id="visible-offers" className="absolute inset-0 z-10 flex items-start justify-center pt-24 md:pt-28 scroll-mt-24">
                 <div className="text-center px-4 max-w-6xl">
                     <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif text-[#d4e157] drop-shadow-lg mb-6 leading-tight">
                         See it, love it, build it &mdash;
